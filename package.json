@@ -1,0 +1,25 @@
+{
+  "name": "outdoorgearbank",
+  "version": "1.0.0",
+  "description": "Research and review any and all outdoor gear on demand! Upload your own products to be researched and reviewed. Send a request for a product to be uploaded. Send feedback to authors based on their product info.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bowens100/Outdoor-Gear-Bank.git"
+  },
+  "author": "Brandon Owens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bowens100/Outdoor-Gear-Bank/issues"
+  },
+  "homepage": "https://github.com/Bowens100/Outdoor-Gear-Bank#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.4.0"
+  }
+}
