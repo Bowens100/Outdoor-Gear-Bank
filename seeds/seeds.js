@@ -14,6 +14,7 @@ Product.deleteMany({})
 const seedProducts = [{
     name: 'Shadow Caster Kayak',
     price: '499',
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS6t9bTXouIBGbEAXx2PvJIqSrVItnrVqYNEVSP-QAt9IP2xutb2uCube9P2ZARhZ7Qf09QmR0HqIvxX85Q8yMnehsrofHG',
     description: 'Fishing Kayak, 90lbs',
     brand: 'Field and Stream',
     type: 'Kayaks'
@@ -21,6 +22,7 @@ const seedProducts = [{
 {
     name: 'Moab 3 WP Mid Mens',
     price: '150',
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS6t9bTXouIBGbEAXx2PvJIqSrVItnrVqYNEVSP-QAt9IP2xutb2uCube9P2ZARhZ7Qf09QmR0HqIvxX85Q8yMnehsrofHG',
     description: 'Waterproof Hiking Boot',
     brand: 'Merrell',
     type: 'Hiking boots'
@@ -28,6 +30,7 @@ const seedProducts = [{
 {
     name: 'Trail Hut 2',
     price: '350',
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS6t9bTXouIBGbEAXx2PvJIqSrVItnrVqYNEVSP-QAt9IP2xutb2uCube9P2ZARhZ7Qf09QmR0HqIvxX85Q8yMnehsrofHG',
     description: '2 person tent, 3 season.',
     brand: 'REI',
     type: 'Tents'
@@ -35,6 +38,7 @@ const seedProducts = [{
 {
     name: '5T97 Baitcaster',
     price: '120',
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS6t9bTXouIBGbEAXx2PvJIqSrVItnrVqYNEVSP-QAt9IP2xutb2uCube9P2ZARhZ7Qf09QmR0HqIvxX85Q8yMnehsrofHG',
     description: 'Baitcasting Rod',
     brand: '13 Fishing',
     type: 'Fishing Rods'
@@ -42,6 +46,7 @@ const seedProducts = [{
 {
     name: 'Kuat Trio Fork Mount ',
     price: '198',
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS6t9bTXouIBGbEAXx2PvJIqSrVItnrVqYNEVSP-QAt9IP2xutb2uCube9P2ZARhZ7Qf09QmR0HqIvxX85Q8yMnehsrofHG',
     description: 'Featuring a 3-way mount system, the Kuat Trio fork mount can handle just about any bike you own. Its slim design, security system, and rugged good looks combine to create a versatile fork mount rack. ',
     brand: 'Kuat',
     type: 'Roof Bike Racks'
@@ -49,6 +54,7 @@ const seedProducts = [{
 {
     name: 'Werner Skagit FG 2-Piece Paddle ',
     price: '155',
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS6t9bTXouIBGbEAXx2PvJIqSrVItnrVqYNEVSP-QAt9IP2xutb2uCube9P2ZARhZ7Qf09QmR0HqIvxX85Q8yMnehsrofHG',
     description: 'The Skagit FG 2-piece paddle from Werner offers beginning and recreational paddlers excellent value and performance. ',
     brand: 'Werner',
     type: 'Kayak Paddles'
@@ -56,6 +62,7 @@ const seedProducts = [{
 {
     name: 'Dynafit Free 97 Skis - 2021/2022 ',
     price: '650',
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS6t9bTXouIBGbEAXx2PvJIqSrVItnrVqYNEVSP-QAt9IP2xutb2uCube9P2ZARhZ7Qf09QmR0HqIvxX85Q8yMnehsrofHG',
     description: 'Playful, nimble and stable, the Dynafit Free 97 skis do it all: long and short tours, powder and hard snow. Wherever you go, these light skis with rockered tips and tails maneuver easily on the snow. ',
     brand: 'Dynafit',
     type: 'Skis'
@@ -63,6 +70,7 @@ const seedProducts = [{
 {
     name: 'Kavu Rope Sling Bag',
     price: '55',
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS6t9bTXouIBGbEAXx2PvJIqSrVItnrVqYNEVSP-QAt9IP2xutb2uCube9P2ZARhZ7Qf09QmR0HqIvxX85Q8yMnehsrofHG',
     description: 'Even if you are on your way to work, the Kavu Rope Sling Bag makes sure you never feel far from the crag thanks to its climbing-rope shoulder strap. Roomy storage and organization round out the bag. ',
     brand: 'Kavu',
     type: 'Sling Bags'
@@ -70,6 +78,7 @@ const seedProducts = [{
 {
     name: 'ENO Guardian SL Hammock Bug Net ',
     price: '45',
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS6t9bTXouIBGbEAXx2PvJIqSrVItnrVqYNEVSP-QAt9IP2xutb2uCube9P2ZARhZ7Qf09QmR0HqIvxX85Q8yMnehsrofHG',
     description: 'Protect your home-away-from-home with the ENO Guardian SL hammock bug net, an ideal choice for the minimalist camper or ultralight backpacker to keep their hammock haven bug-free. ',
     brand: 'Eno',
     type: 'Miscellaneous'
@@ -77,6 +86,7 @@ const seedProducts = [{
 {
     name: 'Black Diamond LiteWire Quickdraw Quickpack - 12cm',
     price: '100',
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS6t9bTXouIBGbEAXx2PvJIqSrVItnrVqYNEVSP-QAt9IP2xutb2uCube9P2ZARhZ7Qf09QmR0HqIvxX85Q8yMnehsrofHG',
     description: 'Ideal for racking cams on desert or alpine climbs, the Black Diamond LiteWire carabiner is a trad climbers wiregate of choice with hot-forged construction and a hinge-basket made for a narrow sling. ',
     brand: 'Black Diamond',
     type: 'Quickdraws'
@@ -84,6 +94,7 @@ const seedProducts = [{
 {
     name: 'Black Diamond Half Dome Helmet ',
     price: '65',
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS6t9bTXouIBGbEAXx2PvJIqSrVItnrVqYNEVSP-QAt9IP2xutb2uCube9P2ZARhZ7Qf09QmR0HqIvxX85Q8yMnehsrofHG',
     description: 'Updated with a low-profile suspension, ABS outer shell and streamlined headlamp clips, the lightweight Black Diamond Half Dome helmet still retains the tried-and-true construction of its predecessor. ',
     brand: 'Black Diamond',
     type: 'Climbing Helmets'

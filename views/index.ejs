@@ -1,14 +1,36 @@
-<%- include('./layout/boilerplate')  %> 
+<%- include('./layout/boilerplate') %>
 
-    <h1>Outdoor Gear Bank</h1>
+    <div class="container">
 
-    <h2>Products</h2>
-    <ul>
-        <% for(p of products){ %> 
-            <li>
-                <a href="/products/<%= p._id %>"><%= p.name  %> </a>
-                
-            </li>
-            <% } %> 
-    </ul>
-    
+        <div class="row my-3">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <h1>Outdoor Gear Bank</h1>
+
+                <h2>Products</h2>
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+        <% for(p of products){ %>
+
+            <div class="row border bg-light">
+                <div class="col-8">
+
+                    <a href="/products/<%= p._id %>">
+                        <h3>
+                            <%= p.name %>
+                        </h3>
+                    </a>
+                    <p>
+                        <%= p.description %>
+                    </p>
+
+
+                </div>
+                <div class="col-4">
+                    <img src="<%= p.image  %>" class="img-fluid img-thumbnail" alt="">
+                </div>
+            </div>
+            <% } %>
+    </div>

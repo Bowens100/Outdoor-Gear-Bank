@@ -1,15 +1,31 @@
-<%- include('../layout/boilerplate')  %> 
-    <h1><%= product.name %> </h1>
-    <ul>
-        <li>Price: $<%= product.price %> </li>
-        <li>Description: <%= product.description  %>  </li>
-        <li>Brand: <%= product.brand  %> </li>
-    </ul>
+<%- include('../layout/boilerplate') %>
 
-    <a href="<%= product._id %>/edit">Edit Product</a>
 
-    <form action="<%= product._id %>?_method=DELETE" method="POST" >
-        <button>Delete</button>
-    </form>
+    <div class="container mt-5 bg-light">
+        <div class="row">
+            <div class="col">
+                <img src="<%= product.image  %>" class="img-fluid" alt="">
+            </div>
+            <div class="col">
+                <h1>
+                    <%= product.name %>
+                </h1>
+                <ul>
+                    <li><strong>Price:</strong> $<%= product.price %>
+                    </li>
+                    <li><strong>Description:</strong>
+                        <%= product.description %>
+                    </li>
+                    <li><strong>Brand:</strong>
+                        <%= product.brand %>
+                    </li>
+                </ul>
 
-    <a href="/products">Back to homepage</a>
+                <a class="btn btn-info mb-2" href="<%= product._id %>/edit">Edit Product</a>
+
+                <form action="<%= product._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger mb-2 ">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
