@@ -2,19 +2,37 @@
 
     <div class="container mt-5">
         <h1>Edit Product</h1>
-        <form action="/products/<%= product._id %>?_method=PUT" method="POST">
+        <form action="/products/<%= product._id %>?_method=PUT" method="POST" class="needs-validation" novalidate>
             <div class="mb-3">
                 <label class="form-label" for="name">Name:</label>
                 <input class="form-control" type="text" name="name" id="name" value="<%=product.name  %>">
+            </div>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please provide a name.
             </div>
             <div class="mb-3">
                 <label class="form-label" for="price">Price:</label>
                 <input class="form-control" type="number" name="price" id="price" value="<%=product.price  %>">
             </div>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please provide a valid price.
+            </div>
             <div class="mb-3">
                 <label class="form-label" for="description">Description:</label>
                 <input class="form-control" type="text" name="description" id="description"
-                    value="<%=product.description  %>">
+                    value="<%=product.description %> " required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a description.
+                </div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="image">Image URL:</label>
@@ -24,11 +42,23 @@
                 <label class="form-label" for="brand">Brand:</label>
                 <input class="form-control" type="text" name="brand" id="brand" value="<%=product.brand  %>">>
             </div>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please specify the brand.
+            </div>
             <div class="mb-3">
                 <label class="form-label" for="type">Type:</label>
                 <input class="form-control" type="text" name="type" id="type" value="<%=product.type  %>">
             </div>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please specify the type.
+            </div>
 
-            <button class="btn btn-success">Submit</button>
+            <button class="btn btn-success" type="submit">Submit</button>
         </form>
     </div>

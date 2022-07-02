@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const Product = require('./models/product');
 const ExpressError = require('./utils/ExpressError');
 const ejsMate = require('ejs-mate');
+const { productSchema } = require('./validateSchemas')
 
 const app = express();
 app.engine('ejs', ejsMate);
@@ -15,6 +16,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 mongoose.connect('mongodb://localhost:27017/OutdoorGearBank');
+
+const validateProduct = (req, res, next) => {
+    const { error } = productSchema.validate(req.body);
+    if (error) {
+        const msg = error.details.map(el => el.message).join(',');
+        throw new ExpressError(msg, 400)
+    } else {
+        next()
+    }
+}
 
 app.get('/', (req, res) => {
     res.send('Welcome!');
@@ -41,7 +52,7 @@ app.get('/products/:id/edit', async (req, res) => {
     res.render('products/edit', { product });
 })
 
-app.post('/products', async (req, res) => {
+app.post('/products', validateProduct, async (req, res) => {
     const newProduct = new Product(req.body);
     await newProduct.save();
     res.redirect('/products');
