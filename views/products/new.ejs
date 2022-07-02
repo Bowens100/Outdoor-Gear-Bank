@@ -1,19 +1,37 @@
-<%- include('../layout/boilerplate') %>
+<% layout('./layout/boilerplate') %>
 
     <div class="container mt-5">
         <h1>New Product</h1>
-        <form action="/products" method="post">
+        <form action="/products" method="POST" class="needs-validation" novalidate>
             <div class="mb-3">
                 <label class="form-label" for="name">Name:</label>
-                <input class="form-control" type="text" name="name" id="name">
+                <input class="form-control" type="text" name="name" id="name" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a name.
+                </div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="price">Price:</label>
-                <input class="form-control" type="number" name="price" id="price">
+                <input class="form-control" type="number" name="price" id="price" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid price.
+                </div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="description">Description:</label>
-                <input class="form-control" type="text" name="description" id="description">
+                <input class="form-control" type="text" name="description" id="description" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a description.
+                </div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="image">Image URL:</label>
@@ -21,13 +39,27 @@
             </div>
             <div class="mb-3">
                 <label class="form-label" for="brand">Brand:</label>
-                <input class="form-control" type="text" name="brand" id="brand">
+                <input class="form-control" type="text" name="brand" id="brand" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please specify the brand.
+                </div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="type">Type:</label>
-                <input class="form-control" type="text" name="type" id="type">
+                <input class="form-control" type="text" name="type" id="type" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please specify the type.
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-primary" type="submit">Submit</button>
             </div>
 
-            <button class="btn btn-success">Submit</button>
         </form>
     </div>

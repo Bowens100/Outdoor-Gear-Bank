@@ -1,20 +1,16 @@
-<%- include('./layout/boilerplate') %>
+<% layout('./layout/boilerplate') %>
 
     <div class="container">
 
-        <div class="row my-3">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <h1>Outdoor Gear Bank</h1>
+        <div class="my-5 d-flex justify-content-center">
 
-                <h2>Products</h2>
-            </div>
-            <div class="col-4"></div>
+            <h1>Products</h1>
+
         </div>
 
         <% for(p of products){ %>
 
-            <div class="row border bg-light">
+            <div class="row border bg-white">
                 <div class="col-8">
 
                     <a href="/products/<%= p._id %>">
