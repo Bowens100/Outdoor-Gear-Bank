@@ -5,7 +5,7 @@ const methodOverride = require('method-override');
 const Product = require('./models/product');
 const ExpressError = require('./utils/ExpressError');
 const ejsMate = require('ejs-mate');
-const { productSchema } = require('./validateSchemas')
+const catchAsync = require('./utils/CatchAsync')
 
 const app = express();
 app.engine('ejs', ejsMate);
@@ -31,45 +31,45 @@ app.get('/', (req, res) => {
     res.send('Welcome!');
 })
 
-app.get('/products', async (req, res) => {
+app.get('/products', catchAsync(async (req, res, next) => {
     const products = await Product.find({});
     res.render('index', { products });
-})
+}))
 
-app.get('/products/new', (req, res) => {
+app.get('/products/new', (req, res, next) => {
     res.render('products/new')
 })
 
-app.get('/products/:id', async (req, res) => {
+app.get('/products/:id', catchAsync(async (req, res, next) => {
     const { id } = req.params;
     const product = await Product.findById(id);
     res.render('products/show', { product });
-})
+}))
 
-app.get('/products/:id/edit', async (req, res) => {
+app.get('/products/:id/edit', catchAsync(async (req, res, next) => {
     const { id } = req.params;
     const product = await Product.findById(id);
     res.render('products/edit', { product });
-})
+}))
 
-app.post('/products', validateProduct, async (req, res) => {
+app.post('/products', validateProduct, catchAsync(async (req, res, next) => {
     const newProduct = new Product(req.body);
     await newProduct.save();
     res.redirect('/products');
-})
+}))
 
-app.put('/products/:id', async (req, res) => {
+app.put('/products/:id', catchAsync(async (req, res, next) => {
     const { id } = req.params;
     const updatedProduct = await Product.findByIdAndUpdate(id, req.body);
     await updatedProduct.save();
     res.redirect(`/products/${id}`);
-})
+}))
 
-app.delete('/products/:id', async (req, res) => {
+app.delete('/products/:id', catchAsync(async (req, res, next) => {
     const { id } = req.params;
     const deletedProduct = await Product.findByIdAndDelete(id);
     res.redirect('/products');
-})
+}))
 
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page Not Found', 404))
